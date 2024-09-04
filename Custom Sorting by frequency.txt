@@ -1,0 +1,13 @@
+Custom Sorting by frequency
+----------------------------------------------------------------------
+from collections import Counter
+
+def solve(n, nums):
+    # Count the frequency of each number
+    freq = Counter(nums)
+    
+    # Sort the list based on frequency and original appearance
+    sorted_nums = sorted(nums, key=lambda x: (freq[x], nums.index(x)))
+    
+    # Print the result as a space-separated string
+    print(' '.join(map(str, sorted_nums)))

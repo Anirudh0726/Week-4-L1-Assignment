@@ -1,0 +1,12 @@
+Sort Positive Numbers and move non positive numbers to the end
+---------------------------------------------------------------
+def solve(n, nums):
+    # Extract positive numbers and sort them
+    positive_nums = sorted([num for num in nums if num > 0])
+    
+    # Rebuild the list by adding sorted positive numbers first
+    result = positive_nums + [num for num in nums if num <= 0]
+    
+    # Print the result as a space-separated string
+    print(' '.join(map(str, result)))
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

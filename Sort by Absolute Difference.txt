@@ -1,0 +1,8 @@
+Sort by Absolute Difference
+----------------------------------------------
+def solve(n, nums, x):
+    # Sort the list based on absolute difference and original order
+    sorted_nums = sorted(nums, key=lambda num: (abs(num - x), nums.index(num)))
+    
+    # Print the result as a space-separated string
+    print(' '.join(map(str, sorted_nums)))
